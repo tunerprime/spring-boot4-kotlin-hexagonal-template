@@ -1,3 +1,7 @@
 spring:
   application:
     name: HttpApplication
+  config:
+    import:
+    - classpath:config/application-actuator.yaml
+    - classpath:config/application-logging.yaml

@@ -6,22 +6,30 @@ spring-boot = "4.0.0"
 spring-dependency-management = "1.1.7"
 
 spotless = "8.1.0"
+kotest = "6.0.7"
 
 [libraries]
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin.jvm", name = "org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "kotlin" }
 
+spring-boot-starter-webmvc = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc",   version.ref = "spring-boot" }
 spring-boot-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator", version.ref = "spring-boot" }
 spring-boot-starter-hateoas  = { group = "org.springframework.boot", name = "spring-boot-starter-hateoas",  version.ref = "spring-boot" }
-spring-boot-starter-webmvc   = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc",   version.ref = "spring-boot" }
 spring-boot-devtools         = { group = "org.springframework.boot", name = "spring-boot-devtools",         version.ref = "spring-boot" }
 spring-boot-configuration-processor = { group = "org.springframework.boot", name = "spring-boot-configuration-processor", version.ref = "spring-boot" }
 
-spring-boot-starter-test     = { group = "org.springframework.boot", name = "spring-boot-starter-test", version.ref = "spring-boot" }
+spring-boot-starter-webmvc-test = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc-test", version.ref = "spring-boot" }
 
 spotless-gradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
 
+kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
+kotest-property = { group = "io.kotest", name = "kotest-property", version.ref = "kotest" }
+kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
+kotest-assertions-json = { group = "io.kotest", name = "kotest-assertions-json", version.ref = "kotest" }
+kotest-spring = { group = "io.kotest", name = "kotest-extensions-spring", version.ref = "kotest" }
+
 
 [bundles]
+kotest = ["kotest-runner-junit5", "kotest-property", "kotest-assertions-core", "kotest-assertions-json", "kotest-spring"]
 
 [plugins]
 graalvm = { id = "org.graalvm.buildtools.native", version.ref = "graalvm" }

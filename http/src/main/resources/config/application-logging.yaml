@@ -1,0 +1,11 @@
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: INFO
+---
+spring:
+  config:
+    activate:
+      on-profile: disabled-banner
+  main:
+    banner-mode: off

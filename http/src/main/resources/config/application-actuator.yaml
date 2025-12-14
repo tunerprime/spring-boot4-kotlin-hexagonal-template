@@ -1,0 +1,23 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'health,info'
+      base-path: /
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+        add-additional-paths: true
+      group:
+        liveness:
+          show-details: always
+          additional-path: server:startup
+          include:
+            - livenessState
+        readiness:
+          show-details: always
+          additional-path: server:ready
+          include:
+            - readinessState

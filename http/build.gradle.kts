@@ -22,7 +22,8 @@ dependencies {
   implementation(libs.spring.boot.starter.webmvc)
   developmentOnly(libs.spring.boot.devtools)
   annotationProcessor(libs.spring.boot.configuration.processor)
-  testImplementation(libs.spring.boot.starter.test)
+  testImplementation(libs.bundles.kotest)
+  testImplementation(libs.spring.boot.starter.webmvc.test)
 }
 
 tasks.withType<Test> {
