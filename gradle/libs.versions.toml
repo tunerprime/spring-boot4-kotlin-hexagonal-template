@@ -1,12 +1,17 @@
 # toml
 [versions]
+kotlin = "2.3.0-RC3"
 graalvm = "0.11.3"
 spring-boot = "4.0.0"
 spring-dependency-management = "1.1.7"
 lombok = "1.18.34"
 junit-platform = "1.10.2"
 
+spotless = "8.1.0"
+
 [libraries]
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "kotlin" }
+
 spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "spring-boot" }
 spring-boot-starter-hateoas  = { module = "org.springframework.boot:spring-boot-starter-hateoas",  version.ref = "spring-boot" }
 spring-boot-starter-webmvc   = { module = "org.springframework.boot:spring-boot-starter-webmvc",   version.ref = "spring-boot" }
@@ -17,6 +22,9 @@ lombok                       = { module = "org.projectlombok:lombok", version.re
 junit-platform-launcher      = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform" }
 
 spring-boot-starter-test     = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
+
+spotless-gradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
+
 
 [bundles]
 

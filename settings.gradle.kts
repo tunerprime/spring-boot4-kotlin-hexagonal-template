@@ -7,3 +7,5 @@ pluginManagement {
 }
 
 include("http")
+
+includeBuild("build-logic")
