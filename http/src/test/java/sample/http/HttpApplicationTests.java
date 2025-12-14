@@ -1,4 +1,4 @@
-package sampl.http;
+package sample.http;
 
 import org.junit.jupiter.api.Test;
 

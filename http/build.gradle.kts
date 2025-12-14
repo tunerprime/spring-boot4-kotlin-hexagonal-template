@@ -1,11 +1,12 @@
 plugins {
     java
+    application
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency.management)
     alias(libs.plugins.graalvm)
 }
 
-group = "sampl"
+group = "sample"
 version = "0.0.1-SNAPSHOT"
 description = "spring-boot4-kotlin-hexagonal-template"
 
