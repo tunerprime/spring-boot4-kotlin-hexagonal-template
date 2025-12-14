@@ -1,0 +1,26 @@
+# toml
+[versions]
+graalvm = "0.11.3"
+spring-boot = "4.0.0"
+spring-dependency-management = "1.1.7"
+lombok = "1.18.34"
+junit-platform = "1.10.2"
+
+[libraries]
+spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "spring-boot" }
+spring-boot-starter-hateoas  = { module = "org.springframework.boot:spring-boot-starter-hateoas",  version.ref = "spring-boot" }
+spring-boot-starter-webmvc   = { module = "org.springframework.boot:spring-boot-starter-webmvc",   version.ref = "spring-boot" }
+spring-boot-devtools         = { module = "org.springframework.boot:spring-boot-devtools",         version.ref = "spring-boot" }
+spring-boot-configuration-processor = { module = "org.springframework.boot:spring-boot-configuration-processor", version.ref = "spring-boot" }
+
+lombok                       = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+junit-platform-launcher      = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform" }
+
+spring-boot-starter-test     = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
+
+[bundles]
+
+[plugins]
+graalvm = { id = "org.graalvm.buildtools.native", version.ref = "graalvm" }
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }

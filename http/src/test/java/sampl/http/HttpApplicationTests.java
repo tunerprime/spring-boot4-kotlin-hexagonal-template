@@ -1,11 +1,11 @@
-package sampl.springboot4kotlinhexagonaltemplate;
+package sampl.http;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBoot4KotlinHexagonalTemplateApplicationTests {
+class HttpApplicationTests {
 
   @Test
   void contextLoads() {
