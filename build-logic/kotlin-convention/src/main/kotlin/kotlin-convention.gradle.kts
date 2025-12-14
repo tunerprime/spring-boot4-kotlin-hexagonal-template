@@ -3,6 +3,10 @@ plugins {
     id("com.diffplug.spotless")
 }
 
+kotlin {
+    jvmToolchain(21)
+}
+
 spotless {
     val excludeFiles = arrayOf(".idea/**/*.*", ".vscode/**/*.*")
     kotlin {
@@ -39,5 +43,7 @@ spotless {
 }
 
 tasks.withType<Test> {
-  dependsOn("spotlessCheck")
+    dependsOn("spotlessCheck")
+    useJUnitPlatform()
+    systemProperty("file.encoding", "UTF-8")
 }
