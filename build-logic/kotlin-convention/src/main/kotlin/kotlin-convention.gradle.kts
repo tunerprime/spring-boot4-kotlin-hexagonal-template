@@ -5,6 +5,9 @@ plugins {
 
 kotlin {
     jvmToolchain(21)
+    compilerOptions {
+        freeCompilerArgs.addAll("-Xjsr305=strict", "-Xannotation-default-target=param-property")
+    }
 }
 
 spotless {
@@ -17,7 +20,7 @@ spotless {
             mapOf(
                 "indent_size" to "2",
                 "continuation_indent_size" to "2",
-                "max_line_length" to "160",
+                "max_line_length" to "off",
                 "insert_final_newline" to "true"
             )
         )

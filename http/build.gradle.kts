@@ -1,6 +1,8 @@
 plugins {
   application
   id("kotlin-convention")
+  alias(libs.plugins.kotlin.spring)
+  alias(libs.plugins.kotlin.allopen)
   alias(libs.plugins.spring.boot)
   alias(libs.plugins.spring.dependency.management)
   alias(libs.plugins.graalvm)
@@ -17,6 +19,7 @@ configurations {
 }
 
 dependencies {
+  implementation(libs.bundles.kotlin)
   implementation(libs.spring.boot.starter.actuator)
   implementation(libs.spring.boot.starter.hateoas)
   implementation(libs.spring.boot.starter.webmvc)

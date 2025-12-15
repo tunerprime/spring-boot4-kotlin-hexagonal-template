@@ -27,11 +27,17 @@ kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core",
 kotest-assertions-json = { group = "io.kotest", name = "kotest-assertions-json", version.ref = "kotest" }
 kotest-spring = { group = "io.kotest", name = "kotest-extensions-spring", version.ref = "kotest" }
 
+kotlon-std = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin" }
+kotlin-jackson = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin" }
 
 [bundles]
+kotlin = ["kotlon-std", "kotlin-reflect", "kotlin-jackson"]
 kotest = ["kotest-runner-junit5", "kotest-property", "kotest-assertions-core", "kotest-assertions-json", "kotest-spring"]
 
 [plugins]
 graalvm = { id = "org.graalvm.buildtools.native", version.ref = "graalvm" }
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+kotlin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
